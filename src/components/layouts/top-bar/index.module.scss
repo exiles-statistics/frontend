@@ -1,0 +1,20 @@
+.root {
+  @apply flex justify-center;
+
+  .link {
+    @apply px-2 py-1.5 h-full mr-1 inline-flex rounded;
+
+    transition: all 45ms ease-in;
+    border: thin solid transparent;
+  }
+
+  .link:hover {
+    background: rgba(0, 0, 0, .12);
+    border-color: rgba(255, 255, 255, .3);
+  }
+
+  .link:active {
+    background: rgba(0, 0, 0, .23);
+    text-decoration: underline;
+  }
+}

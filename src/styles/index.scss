@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply h-full;
+
+  background: url('../assets/images/bg.jpg') no-repeat top center;
+  background-size: cover;
+}
+
+body {
+  @apply h-full;
+
+  background-color: rgba(255, 255, 255, .87) !important;
+}

@@ -1,0 +1,14 @@
+.section {
+  @apply pl-0 mb-8;
+
+  .btn {
+    @apply inline-flex p-2 text-white font-light mr-2;
+
+    background: rgba(0, 0, 0, .75);
+  }
+
+  .heading {
+    @apply mb-2;
+  }
+}
+
