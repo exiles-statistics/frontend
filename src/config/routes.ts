@@ -16,7 +16,7 @@ export const routes = [
   },
   {
     path: '/result/material',
-    name: '物品掉率'
+    name: '材料掉率'
   },
   {
     path: '/about',

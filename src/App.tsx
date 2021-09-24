@@ -11,7 +11,7 @@ export default function App() {
       <main>
         {/* Hero unit */}
         <Container maxWidth="lg" className="mt-8 md:mt-16">
-          <Routing/>
+          <Routing />
         </Container>
       </main>
       {/* Footer */}
