@@ -1,16 +1,29 @@
-import {Box} from "@mui/material";
+import {Box, Button, SvgIcon} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import {FC} from "react";
+import {GitHub} from "@mui/icons-material";
 import styles from './index.module.scss'
 
 interface FooterProps {}
 
 export const Footer: FC<FooterProps> = (props) => {
-  return <Box sx={{p: 6}} component="footer" className={styles["root"]}>
-    <Typography variant="subtitle2" align="center">
-      流亡者情报站 · 数据协议 CC BY-NC-SA 4.0 · 源代码协议 LGPTv3
+  return <Box component="footer" className={styles["root"]}>
+    <Typography variant="subtitle2" align="center" sx={{ pb: 1 }}>
+      数据协议 CC BY-NC-SA 4.0 <br />源代码协议 LGPTv3
     </Typography>
+
+    <Button
+      href="https://github.com/exilers/frontend"
+      variant="outlined"
+      size="small"
+      target="_blank"
+      startIcon={
+        <GitHub />
+      }
+    >
+      GitHub
+    </Button>
     {/*<Typography*/}
     {/*  variant="subtitle1"*/}
     {/*  align="center"*/}
