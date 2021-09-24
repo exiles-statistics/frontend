@@ -6,7 +6,7 @@ import {Link, useLocation} from "@reach/router";
 import * as React from "react";
 import styles from './index.module.scss'
 
-export const BottomBar: FC<any> = props => {
+export const BottomBar: FC<{}> = props => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('sm'))
   const location = useLocation()
 

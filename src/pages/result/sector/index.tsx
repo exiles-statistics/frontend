@@ -1,16 +1,10 @@
-import {FC, useState} from "react";
-import {RouteComponentProps} from "@reach/router";
-import {AnimatePresence, AnimateSharedLayout, motion} from "framer-motion";
-import {Button, Card, CardActionArea, CardContent, CardHeader, Typography} from "@mui/material";
+import {FC} from "react";
 import {SectorSelector} from "components/sectors/sector-selector";
 import {Hero} from "components/common/hero";
 import * as React from "react";
+import {RouteComponentProps} from "@reach/router";
 
-
-
-export const SectorResult: FC<RouteComponentProps> = props => {
-  const [expanded, setExpanded] = useState<number | null>(null);
-
+export const SectorResultPage: FC<RouteComponentProps> = props => {
   return (
     <>
       <Hero

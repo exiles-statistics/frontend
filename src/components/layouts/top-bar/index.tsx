@@ -27,7 +27,7 @@ export const TopBar: FC<TopBarProps> = (props) => {
         {
           isDesktop &&
           routes.map(route => (
-            <Link to={route.path} getProps={({ isCurrent }) => ({
+            <Link key={route.path} to={route.path} getProps={({ isCurrent }) => ({
               className: clsx(
                 styles['link'],
                 isCurrent ? styles['link-active'] : null

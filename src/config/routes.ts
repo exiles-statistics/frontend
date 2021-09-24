@@ -1,8 +1,8 @@
 import {IndexPage} from "pages/index";
-import {SectorResult} from "pages/result/sector";
-import {AccountBox, BubbleChart, Home, PieChart, Upload} from "@mui/icons-material";
-import {MaterialResult} from "pages/result/material";
-import {Report} from "pages/report";
+import {SectorResultPage} from "pages/result/sector";
+import {BubbleChart, Home, PieChart, Upload} from "@mui/icons-material";
+import {MaterialResultPage} from "pages/result/material";
+import {ReportPage} from "pages/report";
 
 export const routes = [
   {
@@ -14,19 +14,19 @@ export const routes = [
   {
     path: '/report',
     name: '汇报掉率',
-    component: Report,
+    component: ReportPage,
     icon: Upload
   },
   {
     path: '/result/sector',
     name: '扇区掉率',
-    component: SectorResult,
+    component: SectorResultPage,
     icon: PieChart
   },
   {
     path: '/result/material',
     name: '材料掉率',
-    component: MaterialResult,
+    component: MaterialResultPage,
     icon: BubbleChart
   }
 ]

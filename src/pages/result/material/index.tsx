@@ -1,8 +1,9 @@
 import {FC} from "react";
 import {Hero} from "components/common/hero";
 import * as React from "react";
+import {RouteComponentProps} from "@reach/router";
 
-export const MaterialResult: FC<{}> = props => {
+export const MaterialResultPage: FC<RouteComponentProps> = props => {
   return (
     <>
       <Hero

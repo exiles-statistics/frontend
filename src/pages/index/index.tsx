@@ -1,11 +1,9 @@
 import {FC} from "react";
-import {RouteComponentProps} from "@reach/router";
-import Typography from "@mui/material/Typography";
 import * as React from "react";
 import {LinkCard} from "components/common/link-card";
 import {CardMedia, Grid} from "@mui/material";
 import styles from './index.module.scss'
-import {Link} from '@reach/router'
+import {Link, RouteComponentProps} from '@reach/router'
 import {Hero} from "components/common/hero";
 
 export const IndexPage: FC<RouteComponentProps> = props => {
