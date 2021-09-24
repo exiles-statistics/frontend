@@ -1,0 +1,15 @@
+.background {
+  @apply fixed h-full w-full top-0 left-0;
+
+  background: url('../../../assets/images/bg.jpg') no-repeat top center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.background::after {
+  @apply fixed h-full w-full top-0 left-0 block;
+
+  content: "";
+  background-color: rgba(255, 255, 255, .87) !important;
+  z-index: -1;
+}

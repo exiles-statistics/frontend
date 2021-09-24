@@ -6,22 +6,21 @@ import {LinkCard} from "components/common/link-card";
 import {CardMedia, Grid} from "@mui/material";
 import styles from './index.module.scss'
 import {Link} from '@reach/router'
+import {Hero} from "components/common/hero";
 
 export const IndexPage: FC<RouteComponentProps> = props => {
   return (
     <div className={styles['root']}>
-      <Typography
-        component="h1"
-        variant="h2"
-        color="text.primary"
-        fontWeight="bold"
-        gutterBottom
-      >
-        欢迎来到{ <br /> }流亡者情报站
-      </Typography>
-      <Typography variant="h5" color="text.secondary" paragraph>
-        流亡者情报站致力于收集「少女前线：云图计划」的相关掉率数据。
-      </Typography>
+      <Hero
+        title={
+          <>
+            欢迎来到{ <br /> }流亡者情报站
+          </>
+        }
+        subtitle={
+          "流亡者情报站致力于收集「少女前线：云图计划」的相关掉率数据。"
+        }
+      />
 
       <Grid container spacing={2} sx={{ mt: 2 }}>
         <Grid item xs={12} md={6}>

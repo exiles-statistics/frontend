@@ -1,0 +1,6 @@
+.root {
+  @apply fixed bottom-0 left-0 right-0 bg-white;
+
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+}

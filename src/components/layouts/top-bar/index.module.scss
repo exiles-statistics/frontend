@@ -4,19 +4,23 @@
   padding-top: env(safe-area-inset-top);
 
   .link {
-    @apply px-2 py-1.5 h-full mr-1 inline-flex rounded;
+    @apply px-2 py-1.5 mr-1 my-2 h-full inline-flex items-center rounded;
 
     transition: all 45ms ease-in;
     border: thin solid transparent;
   }
 
-  .link:hover {
+  .link:hover:not(.link-active) {
     background: rgba(0, 0, 0, .12);
     border-color: rgba(255, 255, 255, .3);
   }
 
   .link:active {
     background: rgba(0, 0, 0, .23);
-    text-decoration: underline;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  }
+
+  .link-active {
+    background: rgba(0, 0, 0, .23);
   }
 }

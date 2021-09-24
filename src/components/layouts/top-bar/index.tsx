@@ -1,15 +1,19 @@
 import {FC} from "react";
-import {AppBar, Toolbar} from "@mui/material";
+import {AppBar, Toolbar, useMediaQuery} from "@mui/material";
 import CameraIcon from "@mui/icons-material/PhotoCamera";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import styles from 'components/layouts/top-bar/index.module.scss'
 import {routes} from "config/routes";
 import {Link} from '@reach/router';
+import clsx from "clsx";
+import theme from "theme";
 
 interface TopBarProps {}
 
 export const TopBar: FC<TopBarProps> = (props) => {
+  const isDesktop = useMediaQuery(theme.breakpoints.up('sm'))
+
   return (
     <AppBar position="relative" className={styles['root']}>
       <Toolbar>
@@ -21,8 +25,14 @@ export const TopBar: FC<TopBarProps> = (props) => {
         </Typography>
 
         {
+          isDesktop &&
           routes.map(route => (
-            <Link to={route.path} className={styles['link']}>
+            <Link to={route.path} getProps={({ isCurrent }) => ({
+              className: clsx(
+                styles['link'],
+                isCurrent ? styles['link-active'] : null
+              )
+            })}>
               {route.name}
             </Link>
           ))
