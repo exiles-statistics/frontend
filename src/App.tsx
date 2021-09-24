@@ -7,7 +7,7 @@ import {Footer} from "components/layouts/footer";
 export default function App() {
   return (
     <>
-      <TopBar/>
+      <TopBar />
       <main>
         {/* Hero unit */}
         <Container maxWidth="lg" className="mt-8 md:mt-16">

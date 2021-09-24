@@ -1,6 +1,8 @@
 .root {
   @apply flex justify-center;
 
+  padding-top: env(safe-area-inset-top);
+
   .link {
     @apply px-2 py-1.5 h-full mr-1 inline-flex rounded;
 
