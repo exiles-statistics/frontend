@@ -15,7 +15,7 @@ export const Footer: FC<FooterProps> = (props) => {
       </Typography>
 
       <Button
-        href="https://github.com/exilers/frontend"
+        href="https://github.com/exiles/frontend"
         variant="outlined"
         size="small"
         target="_blank"
