@@ -22,7 +22,7 @@ const FramerRouter: FC<{}> = ({ children }) => (
 
 const ComponentWrapper: FC<RouteComponentProps & {key: string, element: JSX.Element}> = (props) => {
   return (
-    <motion.div transition={{ type: "spring", duration: 0.325, damping: 12, bounce: 0.6 }}
+    <motion.div transition={{ type: "spring", duration: 0.275, damping: 12, bounce: 0.6 }}
       key={props.key}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
