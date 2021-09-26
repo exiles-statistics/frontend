@@ -3,6 +3,7 @@ import {SectorSelector} from "components/sectors/sector-selector";
 import {Hero} from "components/common/hero";
 import * as React from "react";
 import {RouteComponentProps} from "@reach/router";
+import {UnderDevelopment} from "components/common/under-development";
 
 export const SectorResultPage: FC<RouteComponentProps> = props => {
   return (
@@ -19,7 +20,9 @@ export const SectorResultPage: FC<RouteComponentProps> = props => {
         }
       />
 
-      <SectorSelector />
+      <UnderDevelopment />
+
+      {/*<SectorSelector />*/}
     </>
   )
 }
