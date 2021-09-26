@@ -15,29 +15,31 @@ export const TopBar: FC<TopBarProps> = (props) => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
-    <AppBar position="relative" className={styles['root']}>
-      <Toolbar>
-        <CameraIcon sx={{ mr: 2 }} />
-        <Typography variant="h6" color="inherit" noWrap fontWeight="bold" sx={{
-          mr: 2
-        }}>
-          流亡者情报站
-        </Typography>
+    <>
+      <AppBar position="sticky" className={styles['root']}>
+        <Toolbar>
+          <CameraIcon sx={{ mr: 2 }} />
+          <Typography variant="h6" color="inherit" noWrap fontWeight="bold" sx={{
+            mr: 2
+          }}>
+            流亡者情报站
+          </Typography>
 
-        {
-          isDesktop &&
-          routes.map(route => (
-            <Link key={route.path} to={route.path} getProps={({ isCurrent }) => ({
-              className: clsx(
-                styles['link'],
-                isCurrent ? styles['link-active'] : null
-              )
-            })}>
-              {route.name}
-            </Link>
-          ))
-        }
-      </Toolbar>
-    </AppBar>
+          {
+            isDesktop &&
+            routes.map(route => (
+              <Link key={route.path} to={route.path} getProps={({ isCurrent }) => ({
+                className: clsx(
+                  styles['link'],
+                  isCurrent ? styles['link-active'] : null
+                )
+              })}>
+                {route.name}
+              </Link>
+            ))
+          }
+        </Toolbar>
+      </AppBar>
+    </>
   )
 }

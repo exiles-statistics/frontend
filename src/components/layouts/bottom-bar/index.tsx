@@ -22,6 +22,7 @@ export const BottomBar: FC<{}> = props => {
               <BottomNavigationAction
                 component={Link}
                 to={route.path}
+                key={route.path}
                 value={route.path}
                 label={route.name}
                 icon={<Icon />}

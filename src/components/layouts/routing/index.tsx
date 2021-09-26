@@ -1,4 +1,4 @@
-import {FC, Fragment} from "react";
+import {FC, Fragment, useEffect, useLayoutEffect} from "react";
 import {routes} from "config/routes";
 import {Location, RouteComponentProps, Router} from "@reach/router";
 import {AnimatePresence, motion, MotionConfig} from "framer-motion";
@@ -11,7 +11,7 @@ const FramerRouter: FC<{}> = ({ children }) => (
     {({ location }) => (
       <div style={{ position: "relative" }} className={styles['route']}>
         <AnimatePresence>
-          <Router key={location.pathname} location={location}>
+          <Router primary={false} key={location.pathname} location={location}>
             {children}
           </Router>
         </AnimatePresence>
@@ -20,15 +20,19 @@ const FramerRouter: FC<{}> = ({ children }) => (
   </Location>
 );
 
-const ComponentWrapper: FC<RouteComponentProps & {key: string, element: JSX.Element}> = (props) => {
+const ComponentWrapper: FC<RouteComponentProps & {element: JSX.Element}> = ({ path, element }) => {
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [path])
+
   return (
     <motion.div transition={{ type: "spring", duration: 0.275, damping: 12, bounce: 0.6 }}
-      key={props.key}
+      key={path}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 24 }}
     >
-      {props.element}
+      {element}
     </motion.div>
   )
 }

@@ -5,6 +5,7 @@ import {Routing} from "components/layouts/routing";
 import {BottomBar} from "components/layouts/bottom-bar";
 import {createHistory, LocationProvider} from "@reach/router";
 import {Background} from "components/layouts/background";
+import {Toolbar} from "@mui/material";
 
 // @ts-ignore
 let history = createHistory(window)
@@ -14,7 +15,7 @@ export default function App() {
     <LocationProvider history={history}>
       <Background />
       <TopBar />
-      <Container maxWidth="lg" className="mt-8 pb-24 md:mt-16">
+      <Container maxWidth="lg" className="mt-8 md:mt-16">
         <Routing />
       </Container>
       <BottomBar />

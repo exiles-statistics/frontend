@@ -73,20 +73,19 @@ export const SectorSelector: FC<SectorSelectorProps> = (props) => {
         sectorData.map(sector => {
           return sector.categories.map(category => {
             return (
-              <li className={styles['section']}>
+              <li key={sector.sectorId} className={styles['section']}>
                 <Typography variant="h4" component="h4" className={styles['heading']}>
                   {category.name}
                 </Typography>
                 {
                   category.stages.map(stage => (
-                    <div className={styles['btn']}>
+                    <div key={stage.stageId} className={styles['btn']}>
                       {stage.code}
                     </div>
                   ))
                 }
               </li>
             )
-
           })
         })
       }

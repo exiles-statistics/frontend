@@ -11,3 +11,7 @@ html, body {
 //#root {
 //  @apply h-full;
 //}
+
+.fill-height {
+  @apply flex flex-col flex-1;
+}
