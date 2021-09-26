@@ -10,7 +10,7 @@
     border: thin solid transparent;
   }
 
-  .link:hover:not(.link-active) {
+  .link:hover {
     background: rgba(0, 0, 0, .12);
     border-color: rgba(255, 255, 255, .3);
   }
@@ -22,5 +22,6 @@
 
   .link-active {
     background: rgba(0, 0, 0, .23);
+    border-color: transparent;
   }
 }
