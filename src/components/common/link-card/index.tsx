@@ -22,7 +22,7 @@ export const LinkCard: FC<LinkCardProps> = ({ background, title, subtitle, media
           <Typography variant="h5" component="div" gutterBottom>
             {title}
           </Typography>
-          <Typography color="text.secondary" gutterBottom>
+          <Typography color="text.secondary">
             {subtitle}
           </Typography>
         </CardContent>
